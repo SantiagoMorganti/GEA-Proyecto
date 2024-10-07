@@ -159,8 +159,8 @@ body {
 
 .category_section {
   height: calc(100vh - 0px);
-  background-color: #66349a;
-  color: #ffffff;
+  background-color: #141414;
+  color: #f6f9ee;
   text-align: center;
 }
 
@@ -168,10 +168,27 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0px;
 }
 
 .category_section .heading_container h2 {
+  position: relative;
+  top: -50px;
   border-bottom: 1px solid #ffffff;
+}
+
+.textolargo{
+  position: relative;
+  top: -23px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.geaequipo{
+  text-align: center;
+  width: 180px;
+  padding-top: 20px;
 }
 
 .category_section .category_container {
@@ -197,15 +214,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px 0;
-  min-width: 130px;
-  -ms-flex-preferred-size: 26%;
-      flex-basis: 26%;
+  margin: 0;
+  min-width: 10px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 0;
+}
+
+.img-box img{
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .category_section .category_container .box .img-box {
   width: 120px;
-  height: 120px;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
