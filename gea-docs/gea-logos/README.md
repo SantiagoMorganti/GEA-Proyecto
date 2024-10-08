@@ -1,0 +1,1 @@
+Archivos multimedia del PROYECTO GEA. Incluye logos, texto, etc.

@@ -19,9 +19,15 @@ PROYECTO GEA es nuestra manera de ahondar en uno de las tópicos más importante
 <!-- Socials -->
 
 ## Integrantes:
-- Dominguez Plankenhorn, Mirko Joaquin
-- Giampaolo, Leandro Tomas
-- Morganti, Santiago
-- Rodriguez Vanini, Tobías Ezequiel
-- Sipaczenko, Gregorio
-- Sosa, Gustavo Ariel
+ ### Dominguez Plankenhorn, Mirko Joaquin
+ - @gmail.com
+ ### Giampaolo, Leandro Tomas
+ - leangiampaolo@gmail.com
+ ### Morganti, Santiago
+ - 
+ ### Rodriguez Vanini, Tobías Ezequiel
+ - 
+ ### Sipaczenko, Gregorio
+ - 
+ ### Sosa, Gustavo Ariel
+ - @gmail.com
