@@ -2,7 +2,7 @@
 
 # PROYECTO GEA
 
-<!-- Logo de GEA -->
+<img src="/gea-docs/gea-logos/GEA logo texto recortado.png"
 
 </div>
 
