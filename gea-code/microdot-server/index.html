@@ -12,8 +12,8 @@
     </header>
     <main>
         <h1 style="text-align: center;">
-            Velocidad:XX  
-            Tensión:<span id="tension">XX</span>V  
+            Velocidad:<span id="rpm">XX</span> RPM  
+            Tensión:<span id="tension">XX</span> V  
             Corriente:XX  
             Potencia:XX
         </h1>
@@ -22,18 +22,19 @@
         <p>Representacion de parámetros a tiempo real</p>
     </footer>
     <script>
-        async function fetchTension() {
+        async function fetchData() {
             try {
                 const response = await fetch('/data');  // Hacer una petición a la ruta /data
                 const data = await response.json();     // Parsear la respuesta JSON
                 document.getElementById('tension').textContent = data.tension_eficaz;  // Actualizar la tensión en la página
+                document.getElementById('rpm').textContent = data.rpm;  // Actualizar las RPM en la página
             } catch (error) {
                 console.error('Error al obtener los datos:', error);
             }
         }
 
         // Actualizar los datos cada segundo
-        setInterval(fetchTension, 1000);
+        setInterval(fetchData, 1000);
     </script>
 </body>
 </html>
