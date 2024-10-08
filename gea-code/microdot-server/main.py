@@ -1,10 +1,11 @@
-import microdot 
-from microdot import send_file
+from machine import ADC, Pin
+from time import sleep
+from microdot import Microdot, send_file
 
-app = microdot.Microdot()
+app = Microdot()
 
 # Inicializar los canales ADC
-adc0 = ADC(Pin(26))  # ADC canal 0 (GPIO 26) - para otra señal
+adc0 = ADC(Pin(26))  # ADC canal 0 (GPIO 26)
 adc1 = ADC(Pin(27))  # ADC canal 1 (GPIO 27) - salida del seguidor de tensión ZMP101B
 
 # Parámetros del seguidor de tensión
@@ -18,22 +19,36 @@ def map_adc_to_voltage(adc_value, v_min, v_max):
     """Mapear valor ADC al rango de voltaje entre v_min y v_max."""
     return adc_value * (v_max - v_min) / adc_resolution + v_min
 
-# Ruta para la página principal
-@app.route('/')
-def index(request):
+def calculate_rms_voltage(v_peak, v_peak_max=0.5, v_rms_max=220):
+    """Convertir el valor de voltaje pico a voltaje eficaz."""
+    return (v_peak / v_peak_max) * v_rms_max
+
+# Ruta para devolver los datos en formato JSON
+@app.route('/data')
+def data(request):
     # Leer valores de los ADC
-    adc0_value = adc0.read_u16()  # Valor bruto en el rango de 0 a 65535
     adc1_value = adc1.read_u16()
     
     # Convertir el valor ADC a voltaje para el canal 1 (seguidor de tensión)
     tension_adc1 = map_adc_to_voltage(adc1_value, adc_min_voltage, adc_max_voltage)
+    
+    # Calcular la tensión eficaz a partir del valor pico medido
+    tension_eficaz = calculate_rms_voltage(tension_adc1 - offset)  # Restamos el offset
+    
+    # Devolver los datos en formato JSON
+    return {
+        'tension_eficaz': f'{tension_eficaz:.2f}'
+    }
 
+# Para servir el archivo estático HTML
 @app.route('/')
 def index(request):
     return send_file('index.html')
 
+# Para servir los archivos estáticos (CSS, JS)
 @app.route('/<dir>/<file>')
-def styles(request,dir,file):
-    return send_file("/"+dir+"/"+file)
-app.run(port=80)
+def static_files(request, dir, file):
+    return send_file("/" + dir + "/" + file)
 
+# Iniciar el servidor
+app.run(debug=True, port=80)

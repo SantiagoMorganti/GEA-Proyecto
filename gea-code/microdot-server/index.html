@@ -11,12 +11,29 @@
         <h1>Generador Eólico Aureo</h1>
     </header>
     <main>
-        <h1 style="text-align: center;">Velocidad:XX  Tensión:XX Corriente:XX Potencia:XX</h1>
+        <h1 style="text-align: center;">
+            Velocidad:XX  
+            Tensión:<span id="tension">XX</span>V  
+            Corriente:XX  
+            Potencia:XX
+        </h1>
     </main>
     <footer>
         <p>Representacion de parámetros a tiempo real</p>
     </footer>
-    <script src="scripts/base.js"></script>
+    <script>
+        async function fetchTension() {
+            try {
+                const response = await fetch('/data');  // Hacer una petición a la ruta /data
+                const data = await response.json();     // Parsear la respuesta JSON
+                document.getElementById('tension').textContent = data.tension_eficaz;  // Actualizar la tensión en la página
+            } catch (error) {
+                console.error('Error al obtener los datos:', error);
+            }
+        }
+
+        // Actualizar los datos cada segundo
+        setInterval(fetchTension, 1000);
+    </script>
 </body>
 </html>
-
