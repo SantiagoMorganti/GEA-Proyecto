@@ -142,20 +142,65 @@ body {
   width: 100%;
 }
 
-
-.experience_section .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.experience_section {
+  height: calc(100vh - 0px);
 }
 
-.experience_section .detail-box p {
+.experience_section .carrusel {
+  width: 450px;
+  align-self: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Alto del botón */
+  border-radius: 50%; /* Forma circular */
+  background-color: #66349a; /* Fondo blanco semitransparente */
+  border: 2px solid #141414; /* Borde del botón */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Posiciona los botones fuera de la imagen */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta el desplazamiento */
+}
+
+.carousel-control-prev {
+  left: -60px;
+}
+
+.carousel-control-next {
+  right: -60px;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+}
+
+.experience_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* El carrusel ocupa 2 partes y el texto 1 parte */
+  align-items: start; /* Alinea el carrusel y el texto en la parte superior */
+  gap: 30px;
+  justify-content: center;
+  padding-left: 150px;
+}
+
+.experience_section .detail-box {
+  align-items: start;
+  text-align: left;
+  width: 100%;
+}
+
+.experience_section .detail-box p{
   margin-top: 20px;
 }
 
-.experience_section .img-box img {
-  width: 100%;
-}
 
 .category_section {
   height: calc(125vh - 0px);
