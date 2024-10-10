@@ -158,7 +158,7 @@ body {
 }
 
 .category_section {
-  height: calc(100vh - 0px);
+  height: calc(125vh - 0px);
   background-color: #141414;
   color: #f6f9ee;
   text-align: center;
@@ -185,60 +185,36 @@ body {
   align-items: center;
 }
 
-.geaequipo{
-  text-align: center;
-  width: 180px;
-  padding-top: 20px;
-}
-
 .category_section .category_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  row-gap: 25%; /* Espacio entre filas */
+  column-gap: 8.75%; /* Espacio entre columnas */
+  justify-content: start; /* Alinea las columnas a la izquierda */
 }
 
-.category_section .category_container .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.category_section .box {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  min-width: 10px;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.5%;
 }
+
+.category_section .img-box {
+  margin-right: 15px; /* Espacio entre la imagen y el texto */
+  width: 120px; /* Tamaño fijo de la imagen */
+  height: auto;
+}
+
+.category_section .geaequipo {
+  width: 190px;
+  text-align: left;
+  padding-left: 60px;
+}
+
 
 .img-box img{
-  width: 200px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.category_section .category_container .box .img-box {
-  width: 120px;
-  height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 175px;
 }
 
 .freelance_section .row {
