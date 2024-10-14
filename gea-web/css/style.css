@@ -30,6 +30,7 @@ h6 {
 .black {
 	color:#000000;
 }
+
 .navbar {
 	position: fixed;
 	right: 0;
@@ -97,6 +98,11 @@ h6 {
 .nav-scroll .active {
 	position: relative;
 }
+
+.banner .img-fluid {
+	width: 100%;
+}
+
 .banner {
 	background: #7a60ff;
 	background: linear-gradient(to right, rgba(144,74,219,1) 15%, rgba(195,162,229,1) 35%, rgba(246,249,238,1) 80%);
@@ -158,20 +164,28 @@ h6 {
 }
 .line {
 	height: 2px;
-	width: 50px;
+	width: 275px;
 	background: #8e1efc;
 	display: block;
 	margin: 20px auto 20px;
 }
-.line::after {
-	content:"";
-	position: absolute;
-	left: 50%;
-	width: 150px;
+
+.line2 {
 	height: 2px;
-	border-bottom: 2px dashed #8e1efc;
-	margin-left: -75px;
+	width: 160px;
+	background: #8e1efc;
+	display: block;
+	margin: 20px auto 20px;
 }
+
+.line3 {
+	height: 2px;
+	width: 150px;
+	background: #8e1efc;
+	display: block;
+	margin: 20px auto 20px;
+}
+
 .sectioner-header p {
 	color:#818992;
 	font-size: 17px;
@@ -179,6 +193,7 @@ h6 {
 .section-content {
 	margin-top: 80px;
 }
+
 .icon-box {
 	margin-bottom:50px;
 }
@@ -188,19 +203,18 @@ h6 {
 	width: 135px;
 	height: 135px;
 	border-radius: 100px;
-	background: #7a60ff;
-	background:  linear-gradient(to left, #ff6060, #cd9ffa);
+	background:  linear-gradient(to right, #8e1efc, #52297a);
 	color: #ffffff;
-	font-size: 50px;
+	font-size: 65px;
 	line-height: 135px;
 	margin: 0 auto;
 }
 .icon-box h5 {
-	margin-top:30px;
+	margin-top: 30px;
 }
 .icon-box p {
 	color: #818992;
-	font-size: 14px;
+	font-size: 18px;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -260,24 +274,6 @@ h6 {
 	margin-top: 20px;
 	font-size: 17px;
 	margin-bottom: 0px;
-}
-.bx-prev {
-	left: -90px !important;
-	background: url(images/arrow-left.png) no-repeat !important;
-	background-size: auto auto !important;
-	background-size: 100% 100% !important;
-}
-.bx-next {
-	right: -90px !important;
-	background: url(images/arrow-right.png) no-repeat !important;
-	background-size: auto auto !important;
-	background-size: 100% 100% !important;
-}
-.bx-wrapper {
-	border: none !important;
-	background: rgba(255, 255, 255, 0.81) !important;
-	border-radius: 5px !important;
-	box-shadow:none !important;
 }
 .slider-item {
 	padding:20px;
