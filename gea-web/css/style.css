@@ -44,20 +44,20 @@ h6 {
 	z-index: 1030;
 }
 .navbar .active {
-	color: #a385c2 !important;
+	color: #51297b !important;
 }
 .navbar .nav-item {
 	margin: 0 5px;
 	padding: 0;
 }
 .navbar .nav-item a {
-	color: #51297b;
+	color: #a385c2;
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 13px;
 }
 .navbar .nav-item a:hover {
-	color: #a385c2;
+	color: #51297b;
 }
 .navbar .nav-link {
 	position: relative;
@@ -80,7 +80,7 @@ h6 {
 	transition: all .4s ease;
 }
 .nav-scroll .navbar-nav > li > a {
-	color: #51297b;
+	color: #a385c2;
 }
 .nav-scroll .navbar-brand img {
 	-webkit-transform: scale(1.03) !important;
@@ -106,7 +106,7 @@ h6 {
 .banner {
 	background: #7a60ff;
 	background: linear-gradient(to right, rgba(144,74,219,1) 15%, rgba(195,162,229,1) 35%, rgba(246,249,238,1) 80%);
-	padding:100px 0px;
+	padding: 200px 0px;
 	position:relative;
 }
 .banner::before {
