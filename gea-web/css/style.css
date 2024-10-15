@@ -262,9 +262,7 @@ h6 {
 	border-top: 3px solid #252525;
 	border-bottom: 3px solid #252525;
 }
-.team-detail {
-	margin-top:40px;
-}
+
 .team-detail img {
 	border-radius: 50%;
 	width: 70%;
@@ -463,15 +461,6 @@ h3 {
 }
 .faq-content p {
 	font-size: 13px;
-}
-#contact_form {
-	margin-bottom:20px;
-}
-.contact-item {
-	font-size: 12px;
-}
-.download ul li a img {
-	width: 120px;
 }
 .footer-copy p {
 	font-size: 10px;
