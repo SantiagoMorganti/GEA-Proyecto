@@ -546,16 +546,20 @@ h3 {
 .section-content {
 	margin-top: 40px;
 }
+.faq {
+	background: #fafafa;
+	border-bottom: 1px solid #e4e4e4;
+}
 .faq-content {
-	margin: 10px 0px;
+	margin: 20px 0px;
 }
 .faq-content h4 {
-	font-size: 16px;
+	font-weight: 400;
+	font-size: 20px;
 }
 .faq-content p {
-	font-size: 13px;
-}
-.footer-copy p {
-	font-size: 10px;
+	color: #818992;
+	font-weight:300;
+	margin-top:15px;
 }
 }
