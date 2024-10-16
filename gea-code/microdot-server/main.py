@@ -5,7 +5,7 @@ from microdot import Microdot, send_file
 app = Microdot()
 
 # Inicializar los canales ADC
-adc0 = ADC(Pin(26))  # ADC canal 0 (GPIO 26)
+adc0 = ADC(Pin(26))  # ADC canal 0 (GPIO 26) - ACS712 con divisor de tensión
 adc1 = ADC(Pin(27))  # ADC canal 1 (GPIO 27) - salida del seguidor de tensión ZMP101B
 
 # Parámetros del seguidor de tensión
@@ -45,9 +45,25 @@ def calculate_rpm():
             rpm = frequency * 60  # Convertir a revoluciones por minuto (RPM)
         last_cross_time = current_time  # Actualizar el último cruce por cero
 
+def calculate_current(adc_value):
+    """Convertir la lectura del ADC en corriente (A) usando el ACS712."""
+    # Convertir el valor ADC a voltaje
+    voltage_adc0 = map_adc_to_voltage(adc_value, 0, 3.3)
+    
+    # Ajustar por el divisor de tensión (multiplicar por 3/2)
+    real_voltage = voltage_adc0 * 3 / 2
+    
+    # Convertir voltaje a corriente (según la relación del ACS712)
+    current = (real_voltage - 2.5) * 30 / 2  # 2.5V corresponde a 0A, ±30A dentro de 2V
+    return current
+
 @app.route('/data')
 def data(request):
-    # Calcular la tensión eficaz
+    # Medir corriente desde el ACS712 en el canal 0 (GPIO 26)
+    adc0_value = adc0.read_u16()
+    corriente = calculate_current(adc0_value)
+    
+    # Medir tensión eficaz en el canal 1 (seguidor de tensión ZMP101B)
     adc1_value = adc1.read_u16()
     tension_adc1 = map_adc_to_voltage(adc1_value, adc_min_voltage, adc_max_voltage)
     tension_eficaz = calculate_rms_voltage(tension_adc1 - offset)
@@ -58,7 +74,8 @@ def data(request):
     # Devolver los datos en formato JSON
     return {
         'tension_eficaz': f'{tension_eficaz:.2f}',
-        'rpm': f'{rpm:.2f}'
+        'rpm': f'{rpm:.2f}',
+        'corriente': f'{corriente:.2f}'
     }
 
 # Para servir el archivo estático HTML
