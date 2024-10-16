@@ -71,11 +71,15 @@ def data(request):
     # Calcular la frecuencia y RPM
     calculate_rpm()
     
+    # Calcular la potencia
+    potencia = tension_eficaz * corriente
+    
     # Devolver los datos en formato JSON
     return {
         'tension_eficaz': f'{tension_eficaz:.2f}',
         'rpm': f'{rpm:.2f}',
-        'corriente': f'{corriente:.2f}'
+        'corriente': f'{corriente:.2f}',
+        'potencia': f'{potencia:.2f}'
     }
 
 # Para servir el archivo estático HTML
