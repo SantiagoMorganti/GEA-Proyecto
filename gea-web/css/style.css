@@ -454,12 +454,63 @@ input {
 	background: linear-gradient(to left, #7a60ff, #cd9ffa);
 	cursor:pointer;
 }
+.grupo1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	justify-items: center;
+	align-items: center;
+}
+@media (max-width: 992px) {
+	.grupo1 {
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 576px) {
+	.grupo1 {
+		grid-template-columns: 1fr;
+	}
+}
+.grupo2 .textofondo{
+	display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+    text-align: center; /* Asegura que el texto esté centrado */
+    padding: 10px; /* Añade un padding si es necesario */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+.grupo1 .redes {
+	font-size: 35px;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+}
+.redes a {
+	color: #fff;
+}
+.mail a{
+	color: #fff;
+}
+.grupo1 .mail {
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+}
+.grupo1 .foto img{
+	width: 65px;
+}
 .contact-info {
 	padding: 2rem 2rem 1rem;
 	width: 100%;
-	border-radius: 15px;
+	border-radius: 35px;
 	background: #7a60ff;
-	background: linear-gradient(to left, #7a60ff, #cd9ffa);
+	background: linear-gradient(to bottom right, #cd9ffa 35%, #a385c2, #8e1efc 75%);
 }
 .contact-item {
 	margin:23px 0px;
