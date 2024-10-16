@@ -15,7 +15,7 @@
             Velocidad:<span id="rpm">XX</span> RPM  
             Tensión:<span id="tension">XX</span> V  
             Corriente:<span id="corriente">XX</span> A  
-            Potencia:XX
+            Potencia:<span id="potencia">XX</span> W
         </h1>
     </main>
     <footer>
@@ -29,6 +29,7 @@
                 document.getElementById('tension').textContent = data.tension_eficaz;  // Actualizar la tensión en la página
                 document.getElementById('rpm').textContent = data.rpm;  // Actualizar las RPM en la página
                 document.getElementById('corriente').textContent = data.corriente;  // Actualizar la corriente en la página
+                document.getElementById('potencia').textContent = data.potencia;  // Actualizar la potencia en la página
             } catch (error) {
                 console.error('Error al obtener los datos:', error);
             }
