@@ -14,7 +14,7 @@
         <h1 style="text-align: center;">
             Velocidad:<span id="rpm">XX</span> RPM  
             Tensión:<span id="tension">XX</span> V  
-            Corriente:XX  
+            Corriente:<span id="corriente">XX</span> A  
             Potencia:XX
         </h1>
     </main>
@@ -28,6 +28,7 @@
                 const data = await response.json();     // Parsear la respuesta JSON
                 document.getElementById('tension').textContent = data.tension_eficaz;  // Actualizar la tensión en la página
                 document.getElementById('rpm').textContent = data.rpm;  // Actualizar las RPM en la página
+                document.getElementById('corriente').textContent = data.corriente;  // Actualizar la corriente en la página
             } catch (error) {
                 console.error('Error al obtener los datos:', error);
             }
