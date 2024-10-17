@@ -510,7 +510,7 @@ input {
 	width: 100%;
 	border-radius: 35px;
 	background: #7a60ff;
-	background: linear-gradient(to bottom right, #cd9ffa 35%, #a385c2, #8e1efc 75%);
+	background: linear-gradient(to left, #66349a 15%, #52297a 35%, #3d1f5c 80%);
 }
 .contact-item {
 	margin:23px 0px;
@@ -522,16 +522,9 @@ input {
 	line-height: 20px;
 	margin: 0;
 }
-
-.footer-copy {
-	background: #ffffff;
-	color: #242424;
-	font-size: 13px;
-	text-align: center;
-	padding:15px 0px;
-}
-.footer-copy p {
-	margin-bottom:0px;
+.contact {
+	background: #f9f6ee;
+	border-top: 3px solid #252525;
 }
 @media all and (max-width:991px) {
 .navbar .navbar-collapse {
