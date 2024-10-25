@@ -1,28 +1,40 @@
+@font-face {
+    font-family: 'Calculator';
+    src: url(../Retro\ Gaming.ttf);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f6ee;
+    background-color: black;
     color: white;
 }
 
 header {
-    background-color: #2e2e2e;
+    background-color: black;
     padding: 20px 0;
     text-align: center;
+    border-bottom: 6px solid #66349a;
 }
 
 header h1 {
+    font-family: 'Calculator';
     margin: 0;
-    color: #f9f6ee;
+    color: white;
+    text-shadow: -5px 5px #66349a;
 }
 
 header a {
     font-size: 20px;
+    font-family: 'Calculator';
 }
 
 main {
-    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
 }
 
 .mediciones {
@@ -35,17 +47,18 @@ main {
 .mediciones .fila1, .mediciones .fila2 {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .mediciones h1 {
-    border: 6px solid #3d1f5c;
-    background: linear-gradient(to right, #66349a, #3d1f5c);
+    color: white;
+    border: 6px solid white;
+    box-shadow: -5px 5px #66349a;
+    text-shadow: -5px 5px #66349a;
+    font-family: 'Calculator';
     padding: 10px;
-    border-radius: 5px;
     margin: 5px;
     text-align: center;
-    border-radius: 50px;
 }
 
 @media (max-width: 768px) {
@@ -68,8 +81,9 @@ main {
 }
 
 footer {
-    background-color: #2e2e2e;
-    color: #f9f6ee;
+    background-color: black;
+    border-top: 6px solid #66349a;
+    color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -79,4 +93,7 @@ footer {
 
 footer p {
     margin: 5px 0;
+    font-family: 'Calculator';
+    text-transform: uppercase;
+    font-size: 18px;
 }
