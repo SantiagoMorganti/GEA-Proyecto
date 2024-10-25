@@ -54,6 +54,19 @@ main {
     }
 }
 
+.logogea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.logogea img {
+    max-width: 100%;
+    height: auto;
+}
+
 footer {
     background-color: #2e2e2e;
     color: #f9f6ee;
