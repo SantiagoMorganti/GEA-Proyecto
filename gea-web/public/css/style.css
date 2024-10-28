@@ -341,7 +341,7 @@ h6 {
 	.bx-prev {
 		background: url(../images/arrow-left-black.png) no-repeat !important;
 		background-size: 100% 100% !important;
-	  order: 1; /* Asegura que el botón de prev esté a la izquierda */
+	  	order: 1; /* Asegura que el botón de prev esté a la izquierda */
 	}
   
 	.bx-next {
@@ -351,9 +351,8 @@ h6 {
 	}
   
 	.bx-controls-direction {
-	  display: flex;
-	  justify-content: center; /* Centra los botones horizontalmente */
-	  margin-top: 10px; /* Añade espacio superior si es necesario */
+	  	display: flex;
+	  	justify-content: center; /* Centra los botones horizontalmente */
 	}
   }
   
@@ -529,7 +528,7 @@ input {
 	padding: 10px 0;
 }
 .nav-scroll .navbar-collapse {
-	background: #fff !important;
+	background: #f6f9ee !important;
 }
 #contact_form {
 	margin-bottom:20px;
