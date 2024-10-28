@@ -129,6 +129,10 @@ h6 {
 	bottom: 0;
 	width: 100%;
 }
+.svg-wave img{
+	width: 100%;
+	height: auto;
+}
 .banner-text {
 	padding-right:80px;
 	margin:50px 0px 0px;
@@ -321,6 +325,38 @@ h6 {
 	background-size: auto auto !important;
 	background-size: 100% 100% !important;
 }
+@media (max-width: 576px) {
+	.bx-wrapper {
+	  text-align: center; /* Centra los botones */
+	}
+  
+	.bx-prev, .bx-next {
+		position: relative !important;  /* Remueve la posición absoluta */
+		left: 0 !important;  /* Anula cualquier desplazamiento lateral */
+		transform: none !important; /* Anula el translateX */
+		display: inline-block !important; /* Asegura que los botones estén en línea */
+		margin: 10px 20px; /* Espacio alrededor de los botones */
+	}
+  
+	.bx-prev {
+		background: url(../images/arrow-left-black.png) no-repeat !important;
+		background-size: 100% 100% !important;
+	  order: 1; /* Asegura que el botón de prev esté a la izquierda */
+	}
+  
+	.bx-next {
+		background: url(../images/arrow-right-black.png) no-repeat !important;
+		background-size: 100% 100% !important;
+	  	order: 2; /* Asegura que el botón de next esté a la derecha */
+	}
+  
+	.bx-controls-direction {
+	  display: flex;
+	  justify-content: center; /* Centra los botones horizontalmente */
+	  margin-top: 10px; /* Añade espacio superior si es necesario */
+	}
+  }
+  
 .bx-wrapper {
 	border: none !important;
 	background: rgba(255, 255, 255, 0.81) !important;
@@ -453,6 +489,23 @@ input {
 	background: #7a60ff;
 	background: linear-gradient(to left, #66349a 15%, #52297a 35%, #3d1f5c 80%);
 }
+@media (max-width: 576px) {
+	.contact-info .grupo1 {
+	  display: flex; /* Activa Flexbox */
+	  flex-direction: column; /* Organiza los elementos en una columna */
+	  justify-content: center; /* Centra los elementos verticalmente */
+	  align-items: center; /* Centra los elementos horizontalmente */
+	  text-align: center; /* Asegura que el texto y los ítems se centren */
+	  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+	}
+  
+	.contact-info .foto img {
+	  max-width: 80px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+	  height: auto;
+	  margin-bottom: 10px; /* Añade espacio debajo de la imagen si es necesario */
+	}
+  }
+  
 .contact-item {
 	margin:23px 0px;
 }
@@ -527,10 +580,6 @@ h3 {
 }
 .team-detail img {
 	width: 50%;
-}
-.bx-controls
-{
-	display:none;
 }
 .bx-wrapper {
 	margin: 0px 20px !important;
