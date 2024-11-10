@@ -1,3 +1,3 @@
-# CODIGO DEL MICROCONTROLADOR
+# CÓDIGO DEL MICROCONTROLADOR
 
-Implementacion de un server de microdot para la transmisión inalámbrica a tiempo real de los parámetros de tención, corriente potencia y frecuencia de salida del generador.
+Implementación de un servidor de Microdot para la trasmisión inalámbrica a tiempo real de los parámetros de tensión, corriente, potencia consumida por la carga y frecuencia de giro de la salida del generador.
