@@ -1,0 +1,1 @@
+Directorio para todos los archivos relacionados con la cuenta de Instagram de PROYECTO GEA.

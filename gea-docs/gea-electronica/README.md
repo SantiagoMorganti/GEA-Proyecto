@@ -1,0 +1,1 @@
+Directorio para las fotografías y documentación electrónica del proyecto
