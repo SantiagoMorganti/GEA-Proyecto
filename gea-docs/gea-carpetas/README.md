@@ -1,1 +1,1 @@
-Directorio para las carpetas de campo y técnica del proyecto.
+Directorio para el anteproyecto, manual de usuario y las carpetas de campo y técnica del proyecto.
