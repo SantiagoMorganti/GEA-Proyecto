@@ -1,0 +1,1 @@
+Directorio para las imágenes de la estructura del proyecto y todo su desarrollo.

@@ -1,1 +1,1 @@
-Facturas de compra realizadas hasta el dia de la fecha.
+Directorio para las facturas de compra realizadas hasta el dia de la fecha.

@@ -1,0 +1,1 @@
+Directorio para el banner del proyecto, a ser expuesto en la 32° muestra anual de proyectos.
