@@ -20,7 +20,7 @@ Esta es la manera que hallamos de ahondar en uno de las tópicos más importante
 
 | Página web | Email | Instagram |
 |------------|-------|-----------|
-|[Conócenos](gea-web/images/spiral.png)|contacto.gea.impa@gmail.com|[@proyecto.gea.24](https://www.instagram.com/proyecto.gea.24/)|
+|[Conócenos](https://gea-impatrq.web.app/)|contacto.gea.impa@gmail.com|[@proyecto.gea.24](https://www.instagram.com/proyecto.gea.24/)|
 
 </div>
 
